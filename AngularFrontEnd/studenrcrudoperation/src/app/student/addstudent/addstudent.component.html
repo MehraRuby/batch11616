@@ -1,0 +1,48 @@
+<div class="container g-2">
+  <form>
+    <div class="form-group">
+         <div class="row">
+                 <div class="col-sm-4">
+                         <label for="stname" class="form-label"> Student Name :  </label>
+                 </div>
+                 <div class="col-sm-6">
+                     <input type="text" class="form-control" name="stname" placeholder="Student Name" required
+                     [(ngModel)]="stname"
+                     [ngModelOptions]="{standalone: true}"
+                     >
+                 </div>
+         </div>
+         <br>
+         <div class="row">
+             <div class="col-sm-4">
+                     <label for="score" class="form-label"> Score :  </label>
+             </div>
+             <div class="col-sm-6">
+                 <input type="text" class="form-control" id="score" name="score" placeholder="Score" required
+                 [(ngModel)]="score"
+                [ngModelOptions]="{standalone: true}">
+             </div>
+         </div>
+         <br>
+
+
+         <div class="row">
+             <div class="col-sm-4">
+                     <label for="pic" class="form-label"> Image :  </label>
+             </div>
+             <div class="col-sm-6 gx-5">
+                 <input type="file" class="form-control" id="pic" name="pic"
+                 (change)="onFileSelected($event)" >
+             </div>
+         </div>
+
+         <br>
+
+   </div>
+
+  <div>
+  <button type="submit" class="btn btn-primary"  (click)="addnewsave()">Save</button>
+  </div>
+  </form>
+  </div>
+
